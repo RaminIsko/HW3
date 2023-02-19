@@ -14,8 +14,21 @@ if(number > 10000 && number < 100000){
 }
 
 Console.WriteLine("ЗАДАЧА находящая расстояние между двумя точками в 3D пространстве");
+Console.WriteLine("");
 void Distance(double x1, double x2, double y1, double y2, double z1, double z2){
     double S = Math.Sqrt(Math.Pow((x1 - x2), 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2));
     Console.WriteLine($"Расстояние между двумя точками в 3D пространстве: {S}");
 }
 Distance(1,2,3,4,5,6);
+
+Console.WriteLine("ЗАДАЧА, выводящая ряд кубов чисел от 1 до N");
+Console.WriteLine("");
+void Cube(int num){
+    Console.Write("Ряд кубов чисел: ");
+    for(int i = 0; i < num; i++){
+        Console.Write($"{Convert.ToInt32(Math.Pow(i, 3))} ");
+    }
+}
+Console.Write("Введите число: ");
+int num4 = int.Parse(Console.ReadLine()!);
+Cube(num4);
